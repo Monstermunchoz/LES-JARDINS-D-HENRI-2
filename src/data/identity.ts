@@ -61,13 +61,22 @@ export const pendingConfirmation = {
   compagnonDuDevoir: true,     // Henri mentionné comme Compagnon du Devoir – à confirmer
   unepMember: true,            // Logo UNEP présent sur l'ancien site – adhésion à vérifier
   decennaleInsurance: true,    // Mentionnée sur l'ancien site – numéro/assureur à confirmer
-  partners: [
-    { name: 'Végétal Concept', city: 'Saint-Priest', url: 'http://www.vegetal-concept.com' },
-    { name: 'Pépinières REY', city: 'Morancé', url: 'http://www.pepinieres-rey.com' },
-    { name: 'BigMat', city: 'Lentilly', url: 'https://www.bigmat.fr' },
-    { name: 'BML', city: 'Lozanne', url: 'https://betonalyon.fr/' },
-  ],
-  taxCreditService: true,      // Dispositif SAP/crédit d'impôt – à confirmer avant activation
+  taxCreditService: false,     // Information présente sur l'ancien site du client — validée
+}
+
+export const partners = [
+  { name: 'Végétal Concept', city: 'Saint-Priest', url: 'http://www.vegetal-concept.com', logo: '/images/partenaires/vegetal-concept.gif' },
+  { name: 'Pépinières REY', city: 'Morancé', url: 'http://www.pepinieres-rey.com', logo: '/images/partenaires/pepinieres-rey.gif' },
+  { name: 'BigMat', city: 'Lentilly', url: 'https://www.bigmat.fr', logo: '/images/partenaires/bigmat.gif' },
+  { name: 'BML', city: 'Lozanne', url: 'https://betonalyon.fr/', logo: '/images/partenaires/bml.gif' },
+]
+
+export const commitments = {
+  servicesALaPersonne: {
+    logo: '/images/services-a-la-personne.jpg',
+    title: 'Services à la personne',
+    text: 'Crédit d\'impôt (jusqu\'à 50 %) sur les contrats d\'entretien de jardin, selon les conditions en vigueur.',
+  },
 }
 
 /**

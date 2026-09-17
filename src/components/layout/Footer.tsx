@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { identity } from '@/data/identity'
+import { identity, partners, commitments } from '@/data/identity'
 
 const currentYear = new Date().getFullYear()
 
@@ -111,6 +111,91 @@ export function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Partenaires et engagements */}
+        <div
+          style={{
+            borderTop: '1px solid rgba(255,255,255,0.12)',
+            paddingTop: '2rem',
+            paddingBottom: '2rem',
+            marginBottom: '2.5rem',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: '2.5rem',
+          }}
+        >
+          <div>
+            <h3 style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.5)', margin: '0 0 0.875rem' }}>
+              Nos partenaires
+            </h3>
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1.25rem', justifyContent: 'center' }}>
+              {partners.map((partner) => (
+                <li key={partner.name} style={{ maxWidth: '140px' }}>
+                  <a
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
+                  >
+                    <span
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '140px',
+                        height: '70px',
+                        background: 'white',
+                        borderRadius: 'var(--radius-sm)',
+                        padding: '0.5rem',
+                      }}
+                    >
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        width={140}
+                        height={70}
+                        unoptimized
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                      />
+                    </span>
+                    <span style={{ display: 'block', marginTop: '0.5rem', fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.4 }}>
+                      {partner.name}<br />{partner.city}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.5)', margin: '0 0 0.875rem' }}>
+              Nos engagements
+            </h3>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
+              <span
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '72px',
+                  background: 'white',
+                  borderRadius: 'var(--radius-sm)',
+                  padding: '0.5rem',
+                }}
+              >
+                <Image
+                  src={commitments.servicesALaPersonne.logo}
+                  alt={commitments.servicesALaPersonne.title}
+                  width={86}
+                  height={72}
+                  style={{ height: '72px', width: 'auto', objectFit: 'contain' }}
+                />
+              </span>
+              <p style={{ margin: 0, fontSize: '0.875rem', lineHeight: 1.6, maxWidth: '280px', color: 'rgba(255,255,255,0.75)' }}>
+                {commitments.servicesALaPersonne.text}
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Addresses */}

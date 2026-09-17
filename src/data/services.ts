@@ -258,8 +258,8 @@ export const servicePages: ServicePage[] = [
         content: 'L\'élagage intervient pour la sécurité, la santé de l\'arbre et son esthétique. L\'équipe travaille en respectant la physiologie des végétaux et les règles sanitaires en vigueur.',
       },
       {
-        title: 'Avantage fiscal possible',
-        content: 'Certaines prestations d\'entretien courant peuvent ouvrir droit à un crédit d\'impôt, selon votre situation et les conditions applicables. Renseignez-vous auprès de votre conseiller fiscal ou contactez-nous pour en savoir plus.',
+        title: 'Jusqu\'à 50 % de crédit d\'impôt',
+        content: 'Les Jardins d\'Henri sont agréés Services à la personne. Les prestations d\'entretien courant de votre jardin (tonte, taille, désherbage, nettoyage) peuvent ouvrir droit à un crédit d\'impôt pouvant atteindre 50 % des sommes versées, selon les conditions en vigueur. Nous vous précisons les modalités lors du premier échange.',
       },
     ],
     coverImage: '/images/cloture-ajouree-500x500.jpg',

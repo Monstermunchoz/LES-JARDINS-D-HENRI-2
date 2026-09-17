@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { identity } from '@/data/identity'
+import { identity, commitments } from '@/data/identity'
 import { portfolioItems } from '@/data/portfolio'
 import { beforeAfterPairs } from '@/data/before-after'
 import { BeforeAfterSlider } from '@/components/ui/BeforeAfterSlider'
@@ -403,6 +403,45 @@ export default function HomePage() {
           <p style={{ fontSize: '0.8rem', textAlign: 'center', opacity: 0.55, marginTop: '1.5rem', fontStyle: 'italic' }}>
             Ce parcours illustre le déroulement habituel — les modalités exactes sont à définir lors du premier échange.
           </p>
+        </div>
+      </section>
+
+      {/* ── CRÉDIT D'IMPÔT / SERVICES À LA PERSONNE ─────────────── */}
+      <section
+        aria-labelledby="tax-credit-title"
+        style={{ paddingBlock: 'var(--section-gap)' }}
+      >
+        <div className="container" style={{ maxWidth: '760px' }}>
+          <div
+            style={{
+              background: 'var(--color-white)',
+              border: '1px solid var(--color-stone)',
+              borderRadius: 'var(--radius-lg)',
+              padding: '2.5rem 1.5rem',
+            }}
+          >
+            <Image
+              src={commitments.servicesALaPersonne.logo}
+              alt={commitments.servicesALaPersonne.title}
+              width={178}
+              height={150}
+              style={{ height: '96px', width: 'auto' }}
+            />
+            <h2 id="tax-credit-title" className="section-title" style={{ marginTop: '1.25rem', marginBottom: '1rem' }}>
+              Entretien de jardin : jusqu&apos;à 50 % de crédit d&apos;impôt
+            </h2>
+            <p style={{ marginBottom: '1.5rem', lineHeight: 1.7, maxWidth: '560px', marginInline: 'auto' }}>
+              Les Jardins d&apos;Henri sont agréés Services à la personne : les contrats d&apos;entretien courant de votre jardin peuvent ouvrir droit à un crédit d&apos;impôt, selon les conditions en vigueur.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              <Link href="/services/entretien-jardin/" className="btn-primary">
+                Entretien de jardins
+              </Link>
+              <Link href="/devis/?type=entretien" className="btn-secondary">
+                Demander un devis
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

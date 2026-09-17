@@ -431,3 +431,7 @@ footer address strong {
 footer .footer-contact-link {
   justify-content: center;
 }
+
+@media (max-width: 767px) {
+  footer { padding-bottom: calc(5.5rem + env(safe-area-inset-bottom)) !important; }
+}
