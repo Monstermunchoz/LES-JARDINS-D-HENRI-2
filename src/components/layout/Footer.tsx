@@ -68,8 +68,8 @@ export function Footer() {
           }}
         >
           {/* Brand column */}
-          <div style={{ gridColumn: '1 / -1', maxWidth: '300px' }}>
-            <Link href="/" aria-label={`${identity.brandName} — retour à l'accueil`}>
+          <div style={{ gridColumn: '1 / -1', maxWidth: '300px', marginInline: 'auto', textAlign: 'center' }}>
+            <Link href="/" aria-label={`${identity.brandName} — retour à l'accueil`} style={{ display: 'flex', justifyContent: 'center' }}>
               <Image
                 src="/images/logo-jardins-henri-creme.png"
                 alt={`Logo ${identity.brandName}`}
@@ -79,7 +79,7 @@ export function Footer() {
                 style={{ height: '3.5rem', width: 'auto' }}
               />
             </Link>
-            <p style={{ marginTop: '1rem', fontSize: '0.875rem', lineHeight: 1.6, maxWidth: '260px' }}>
+            <p style={{ marginTop: '1rem', fontSize: '0.875rem', lineHeight: 1.6, maxWidth: '260px', marginInline: 'auto' }}>
               Paysagiste et maçonnerie extérieure dans les Monts d&apos;Or, la Métropole de Lyon, l&apos;Ouest Lyonnais, le Beaujolais et la Vallée d&apos;Azergues.
             </p>
             <div style={{ marginTop: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>

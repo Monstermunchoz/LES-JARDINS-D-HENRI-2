@@ -364,72 +364,70 @@ body {
 }
 
 /* ────────────────────────────────────────────────────
-   Mobile : tout le contenu est centré
+   Tout le contenu est centré (mobile et desktop)
    (les styles de mise en page sont inline dans les composants,
    d'où les sélecteurs d'attribut sur `style`)
    ──────────────────────────────────────────────────── */
-@media (max-width: 767px) {
-  main,
-  footer,
-  #mobile-menu {
-    text-align: center;
-  }
+main,
+footer,
+#mobile-menu {
+  text-align: center;
+}
 
-  /* Les rangées flex (boutons, badges, pastilles, fil d'Ariane) se centrent */
-  main [style*="display:flex"],
-  footer [style*="display:flex"],
-  #mobile-menu [style*="display:flex"] {
-    justify-content: center !important; /* prime sur les space-between inline */
-  }
-  main [style*="flex-direction:column"],
-  footer [style*="flex-direction:column"],
-  #mobile-menu [style*="flex-direction:column"] {
-    align-items: center !important;
-  }
+/* Les rangées flex (boutons, badges, pastilles, fil d'Ariane) se centrent */
+main [style*="display:flex"],
+footer [style*="display:flex"],
+#mobile-menu [style*="display:flex"] {
+  justify-content: center !important; /* prime sur les space-between inline */
+}
+main [style*="flex-direction:column"],
+footer [style*="flex-direction:column"],
+#mobile-menu [style*="flex-direction:column"] {
+  align-items: center !important;
+}
 
-  /* Les blocs à largeur limitée se centrent au lieu de rester à gauche */
-  main [style*="max-width"],
-  footer [style*="max-width"] {
-    margin-inline: auto;
-  }
+/* Les blocs à largeur limitée se centrent au lieu de rester à gauche */
+main [style*="max-width"],
+footer [style*="max-width"] {
+  margin-inline: auto;
+}
 
-  /* Listes à puces : centrées sans retrait */
-  main ul:not([style*="list-style:none"]),
-  main ol:not([style*="list-style:none"]) {
-    padding-left: 0;
-    list-style-position: inside;
-  }
+/* Listes à puces : centrées sans retrait */
+main ul:not([style*="list-style:none"]),
+main ol:not([style*="list-style:none"]) {
+  padding-left: 0;
+  list-style-position: inside;
+}
 
-  /* Le texte saisi dans les champs reste aligné à gauche, mais les champs sont centrés */
-  main input:not([type="checkbox"]):not([type="radio"]),
-  main textarea,
-  main select {
-    text-align: left;
-  }
-  main form,
-  main form > div,
-  main fieldset {
-    text-align: center;
-  }
-  main .field-label,
-  main legend {
-    text-align: center;
-  }
+/* Le texte saisi dans les champs reste aligné à gauche, mais les champs sont centrés */
+main input:not([type="checkbox"]):not([type="radio"]),
+main textarea,
+main select {
+  text-align: left;
+}
+main form,
+main form > div,
+main fieldset {
+  text-align: center;
+}
+main .field-label,
+main legend {
+  text-align: center;
+}
 
-  /* Tableau d'informations de la page entreprise : une colonne centrée */
-  main dl[style*="grid-template-columns:auto 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
-  main dl[style*="grid-template-columns:auto 1fr"] dt {
-    margin-top: 0.5rem;
-  }
+/* Tableau d'informations de la page entreprise : une colonne centrée */
+main dl[style*="grid-template-columns:auto 1fr"] {
+  grid-template-columns: 1fr !important;
+}
+main dl[style*="grid-template-columns:auto 1fr"] dt {
+  margin-top: 0.5rem;
+}
 
-  /* Pied de page : colonnes empilées et centrées */
-  footer address,
-  footer address strong {
-    text-align: center;
-  }
-  footer .footer-contact-link {
-    justify-content: center;
-  }
+/* Pied de page : colonnes empilées et centrées */
+footer address,
+footer address strong {
+  text-align: center;
+}
+footer .footer-contact-link {
+  justify-content: center;
 }

@@ -101,7 +101,7 @@ export default function HomePage() {
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to top, rgba(18,36,26,0.88) 0%, rgba(18,36,26,0.45) 45%, rgba(18,36,26,0.08) 100%)',
+            background: 'linear-gradient(to top, rgba(18,36,26,0.92) 0%, rgba(18,36,26,0.62) 45%, rgba(18,36,26,0.38) 100%)',
           }}
         />
 
